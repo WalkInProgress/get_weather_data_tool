@@ -16,8 +16,8 @@ def job():
     create_html_report(weather_dict_ordered, icon, email_file)
     send_gmail(email_file)
 
-#schedule.every().hour.do(job)
-schedule.every(1).minutes.do(job)
+schedule.every().hour.do(job)
+#schedule.every(1).minutes.do(job)
 
 while True:
     schedule.run_pending()
